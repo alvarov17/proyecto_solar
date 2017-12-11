@@ -17,6 +17,6 @@ require 'connection.php';
          $_SESSION['id'] = $reg['usu_id'];
         header ("location: ../home.php");
     } else {
-        echo "no existe en mi bd";
+        echo "$query";
     }
         

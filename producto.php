@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Document</title>
-    <?php session_start();?>
+    <?php require 'controller/listarProducto.php' ?>
 </head>
 
 <body>
@@ -29,13 +29,19 @@
             </ul>
         </nav>
     </header>
-    <h1>
-        <?php print_r($_SESSION)?>
-    </h1>
     <article>
         <section>
-            <h1>Mis productos registrados</h1>
-            <?php require 'controller/selectMisProductos.php'?>
+            <?php echo "<h1>" . $reg['prod_nombre'] . "</h1>"; ?>
+            <?php echo "<p>" . $reg['prod_desc'] . "<p>"; ?>
+            <?php echo "<p>" ."Stock : " . $reg['prod_stock'] . "<p>"; ?>
+            <?php echo "<p>" ."Fecha publicacion : ". $reg['prod_fecha'] . "<p>"; ?>
+            <h2>Comentarios</h2>
+            <?php require "controller/mostrarComentarios.php"?>
+            <form action="controller/registroComentario.php" method="post">
+                <textarea name="comentario" cols="30" rows="10"></textarea><br>
+                <input type="hidden" name="id" value=<?php echo '"' . $_GET['id'] . '"'; ?>>
+                <input type="submit" value="Enviar">
+            </form>
         </section>
     </article>
 </body>
