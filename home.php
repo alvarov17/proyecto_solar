@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Document</title>
     <?php session_start();?>
 </head>
@@ -36,6 +35,15 @@
         <section>
             <h1>Mis productos registrados</h1>
             <?php require 'controller/selectMisProductos.php'?>
+        </section>
+        <section>
+        <h1>Buscar Productos</h1>
+            <a href="buscarProducto.php?tipo=Funda">Fundas</a><br>
+            <a href="buscarProducto.php?tipo=ManosLibres">Manos Libres</a><br>
+            <a href="buscarProducto.php?tipo=Mica">Micas</a><br>
+            <a href="buscarProducto.php?tipo=BateriaExterna">Baterias Externas</a><br>
+            <a href="buscarProducto.php?tipo=TarjetadeMemoria">Tarjetas de Memoria</a><br>
+            <a href="buscarProducto.php?tipo=SelfieStick">Selfie Stick</a><br>
         </section>
     </article>
 </body>

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Document</title>
     <?php require 'controller/listarProducto.php' ?>
 </head>
@@ -31,7 +30,7 @@
     </header>
     <article>
         <section>
-            <?php echo "<h1>" . $reg['prod_nombre'] . "</h1>"; ?>
+            <?php echo "<h1>" . $reg['prod_titulo'] . "</h1>"; ?>
             <?php echo "<p>" . $reg['prod_desc'] . "<p>"; ?>
             <?php echo "<p>" ."Stock : " . $reg['prod_stock'] . "<p>"; ?>
             <?php echo "<p>" ."Fecha publicacion : ". $reg['prod_fecha'] . "<p>"; ?>
