@@ -10,23 +10,30 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li>
-                <a href="home.php">Bienvenido
-                    <?php echo $_SESSION['nombre']; ?>
-                </a>
-            </li>
-            <li>
-                <a href="controller/logout.php">Salir</a>
-            </li>
-            <li>
-                <a class="active" href="IngresoProd.php">Ingresar producto</a>
-            </li>
-        </ul>
-    </nav>
-    
-    
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="home.php">Bienvenido
+                        <?php echo $_SESSION['nombre']; ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="controller/logout.php">Salir</a>
+                </li>
+                <li>
+                    <a class="active" href="IngresoProd.php">Ingresar producto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <?php require 'controller/buscarOtrosProductos.php' ?>
+        </article>
+    </section>
+
 
 </body>
 
